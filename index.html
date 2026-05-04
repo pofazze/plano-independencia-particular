@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Plano de Independência Particular — CPP</title>
 <meta name="description" content="Mapa de 30 dias para o cirurgião montar a operação particular. Mentoria Cirurgião Particular Premium — Patrick Suyti + Dr. Mateus Jerônimo.">
+<link rel="icon" type="image/png" href="cpp-logo.png">
+<meta property="og:title" content="Plano de Independência Particular — CPP">
+<meta property="og:description" content="Seu mapa de 30 dias para montar a operação particular. Patrick Suyti + Dr. Mateus Jerônimo.">
+<meta property="og:image" content="cpp-header-dupla.png">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +21,8 @@
   --card-2:#1a1a26;
   --line:#2a2a38;
   --gold:#c9a35a;
-  --gold-2:#e6c884;
+  --gold-2:#e8c98a;
+  --gold-3:#f4dfb0;
   --gold-soft:#8a6f3d;
   --ink:#f5f1e8;
   --ink-2:#cfc9bc;
@@ -36,9 +42,11 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 /* ===== TOPBAR ===== */
 .topbar{position:sticky;top:0;z-index:50;background:rgba(10,10,15,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .topbar-in{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto}
-.brand{display:flex;align-items:center;gap:12px;font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.04em}
-.brand-mark{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-soft) 100%);display:flex;align-items:center;justify-content:center;color:#0a0a0f;font-weight:700;font-family:'Cormorant Garamond',serif;font-size:16px}
-.brand-text{color:var(--ink);font-weight:500}
+.brand{display:flex;align-items:center;gap:14px;font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:.04em}
+.brand-mark{width:42px;height:42px;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 2px 8px rgba(201,163,90,.25))}
+.brand-mark img{width:100%;height:100%;object-fit:contain}
+.brand-text{color:var(--ink);font-weight:500;line-height:1.1}
+.brand-text small{display:block;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-2);margin-bottom:2px;font-family:'Inter',sans-serif}
 .brand-text b{color:var(--gold-2);font-weight:600}
 .nav{display:flex;gap:26px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2)}
 .nav a{color:var(--ink-2)}
@@ -46,20 +54,30 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 @media (max-width:780px){.nav{display:none}}
 
 /* ===== HERO ===== */
-.hero{padding:120px 0 100px;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 30%,rgba(201,163,90,.10) 0%,transparent 70%);pointer-events:none}
-.hero-in{position:relative;z-index:1;text-align:center}
-.eyebrow{display:inline-block;padding:8px 20px;border:1px solid var(--gold-soft);border-radius:999px;color:var(--gold-2);font-size:11px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:32px}
+.hero{padding:80px 0 0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 30%,rgba(201,163,90,.12) 0%,transparent 70%);pointer-events:none;z-index:0}
+.hero-in{position:relative;z-index:2;text-align:center}
+.hero-logo{display:block;margin:0 auto 36px;width:140px;height:auto;filter:drop-shadow(0 8px 32px rgba(201,163,90,.3))}
+.eyebrow{display:inline-block;padding:8px 20px;border:1px solid var(--gold-soft);border-radius:999px;color:var(--gold-2);font-size:11px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:32px;background:rgba(10,10,15,.4);backdrop-filter:blur(8px)}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,7vw,86px);font-weight:500;line-height:1.05;letter-spacing:-.02em;margin-bottom:24px;color:var(--ink)}
 .hero h1 em{font-style:italic;color:var(--gold-2);font-weight:400}
 .hero .sub{font-size:clamp(18px,2.2vw,22px);color:var(--ink-2);max-width:760px;margin:0 auto 48px;font-weight:300}
-.signers{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:40px}
-.signer{display:flex;align-items:center;gap:14px}
-.signer-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--card-2),var(--card));border:1px solid var(--gold-soft);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold-2)}
-.signer-info{text-align:left}
-.signer-name{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--ink)}
-.signer-role{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
-.hero-meta{margin-top:60px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.hero-photo{position:relative;margin-top:64px;width:100%;max-height:540px;overflow:hidden}
+.hero-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,transparent 60%,var(--bg) 100%);z-index:2;pointer-events:none}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,transparent 12%,transparent 88%,var(--bg) 100%);z-index:2;pointer-events:none}
+.hero-photo img{width:100%;height:auto;display:block;object-fit:cover}
+.signers{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;padding:32px 0 16px;position:relative;z-index:3;margin-top:-100px}
+.signer{display:flex;align-items:center;gap:12px}
+.signer-info{text-align:center}
+.signer-name{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--ink);font-weight:500;line-height:1.1}
+.signer-role{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold-2);margin-top:4px}
+.signer-divider{width:1px;height:36px;background:linear-gradient(180deg,transparent,var(--gold-soft),transparent)}
+@media (max-width:640px){
+  .signers{flex-direction:column;gap:24px;margin-top:-60px}
+  .signer-divider{width:36px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-soft),transparent)}
+}
+.hero-meta{padding:32px 0 80px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);text-align:center;position:relative;z-index:3}
+.hero-meta span{color:var(--gold-2)}
 
 /* ===== SECTION ===== */
 section{padding:80px 0}
@@ -115,9 +133,11 @@ section{padding:80px 0}
 .ancora-q{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--ink);font-style:italic;font-weight:400;line-height:1.4}
 
 /* ===== WEEK BREAK ===== */
-.week-break{padding:64px 0 32px;text-align:center;border-top:1px solid var(--line);margin-top:32px}
-.week-break .num{font-family:'Cormorant Garamond',serif;font-size:80px;color:var(--gold-2);line-height:1;font-weight:300}
-.week-break .label{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+.week-break{padding:80px 0 40px;text-align:center;margin-top:40px;position:relative}
+.week-break::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-soft),transparent)}
+.week-break .ornament{display:block;margin:0 auto 24px;width:56px;opacity:.7;filter:drop-shadow(0 2px 12px rgba(201,163,90,.4))}
+.week-break .num{font-family:'Cormorant Garamond',serif;font-size:72px;color:var(--gold-2);line-height:1;font-weight:300;letter-spacing:.04em}
+.week-break .label{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);margin-top:10px}
 .week-break .title{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--ink);font-weight:500;margin-top:14px;letter-spacing:-.01em}
 .week-break .pillar{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2);margin-top:14px}
 
@@ -142,14 +162,18 @@ section{padding:80px 0}
 .cta{padding:120px 0;text-align:center;background:linear-gradient(180deg,transparent 0%,rgba(201,163,90,.06) 50%,transparent 100%);border-top:1px solid var(--line);position:relative;overflow:hidden}
 .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 50% 40% at 50% 50%,rgba(201,163,90,.08) 0%,transparent 70%);pointer-events:none}
 .cta-in{position:relative;z-index:1}
+.cta-logo{display:block;margin:0 auto 32px;width:96px;opacity:.95;filter:drop-shadow(0 4px 16px rgba(201,163,90,.35))}
 .cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);color:var(--ink);font-weight:500;line-height:1.1;margin-bottom:20px;letter-spacing:-.01em}
 .cta h2 em{color:var(--gold-2);font-style:italic}
 .cta p{font-size:18px;color:var(--ink-2);max-width:680px;margin:0 auto 40px;font-weight:300}
-.btn{display:inline-block;padding:18px 40px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-soft) 100%);color:#0a0a0f;font-weight:600;font-size:14px;letter-spacing:.15em;text-transform:uppercase;border-radius:8px;transition:transform .3s ease,box-shadow .3s ease}
-.btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px -8px rgba(201,163,90,.4)}
+.btn{display:inline-block;padding:18px 40px;background:linear-gradient(135deg,var(--gold-3) 0%,var(--gold) 50%,var(--gold-soft) 100%);color:#0a0a0f;font-weight:600;font-size:14px;letter-spacing:.15em;text-transform:uppercase;border-radius:8px;transition:transform .3s ease,box-shadow .3s ease;border:1px solid var(--gold-3)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px -8px rgba(201,163,90,.5)}
+.cta-signature{margin-top:48px;display:inline-flex;gap:32px;align-items:center;padding-top:32px;border-top:1px solid var(--line)}
+.cta-signature .name{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold-2);font-style:italic}
 
 /* ===== FOOTER ===== */
 footer{padding:60px 0 80px;border-top:1px solid var(--line);text-align:center}
+.foot-logo{display:block;margin:0 auto 20px;width:64px;opacity:.85}
 .foot-brand{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold-2);margin-bottom:8px;letter-spacing:.04em}
 .foot-meta{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-bottom:18px}
 .foot-note{font-size:13px;color:var(--ink-3);max-width:520px;margin:0 auto;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:16px}
@@ -168,8 +192,11 @@ footer{padding:60px 0 80px;border-top:1px solid var(--line);text-align:center}
 <header class="topbar">
   <div class="topbar-in">
     <div class="brand">
-      <div class="brand-mark">CP</div>
-      <div class="brand-text">Cirurgião Particular <b>Premium</b></div>
+      <div class="brand-mark"><img src="cpp-logo.png" alt="CPP"></div>
+      <div class="brand-text">
+        <small>Mentoria</small>
+        Cirurgião Particular <b>Premium</b>
+      </div>
     </div>
     <nav class="nav">
       <a href="#manifesto">Manifesto</a>
@@ -184,27 +211,30 @@ footer{padding:60px 0 80px;border-top:1px solid var(--line);text-align:center}
 <!-- HERO -->
 <section class="hero">
   <div class="wrap hero-in">
+    <img src="cpp-logo.png" alt="Cirurgião Particular Premium" class="hero-logo">
     <span class="eyebrow">Plano de Independência Particular</span>
     <h1>Seu mapa de <em>30 dias</em><br>para montar a operação particular</h1>
     <p class="sub">Não é um curso. Não é uma promessa. É o caminho ordenado, dia por dia, que separa o cirurgião que <em>atende particular</em> do cirurgião que <em>tem operação particular</em>.</p>
-    <div class="signers">
-      <div class="signer">
-        <div class="signer-avatar">PS</div>
-        <div class="signer-info">
-          <div class="signer-name">Patrick Suyti</div>
-          <div class="signer-role">Estratégia · Posicionamento</div>
-        </div>
-      </div>
-      <div class="signer">
-        <div class="signer-avatar">MJ</div>
-        <div class="signer-info">
-          <div class="signer-name">Dr. Mateus Jerônimo</div>
-          <div class="signer-role">Método · Mentoria</div>
-        </div>
+  </div>
+  <div class="hero-photo">
+    <img src="cpp-header-dupla.png" alt="Patrick Suyti e Dr. Mateus Jerônimo">
+  </div>
+  <div class="signers">
+    <div class="signer">
+      <div class="signer-info">
+        <div class="signer-name">Patrick Suyti</div>
+        <div class="signer-role">Estratégia · Posicionamento</div>
       </div>
     </div>
-    <div class="hero-meta">Mentoria CPP · Maio · 2026</div>
+    <div class="signer-divider"></div>
+    <div class="signer">
+      <div class="signer-info">
+        <div class="signer-name">Dr. Mateus Jerônimo</div>
+        <div class="signer-role">Método · Mentoria</div>
+      </div>
+    </div>
   </div>
+  <div class="hero-meta">Mentoria CPP <span>·</span> Maio <span>·</span> 2026</div>
 </section>
 
 <!-- MANIFESTO -->
@@ -271,7 +301,7 @@ footer{padding:60px 0 80px;border-top:1px solid var(--line);text-align:center}
 
   <!-- ===== SEMANA 1 ===== -->
   <div class="wrap">
-    <div class="week-break">
+    <div class="week-break"><img src="cpp-logo.png" alt="" class="ornament">
       <div class="num">I</div>
       <div class="label">Semana 1 · Identidade</div>
       <div class="title">Postura · Reposicionamento · Encantamento</div>
@@ -548,7 +578,7 @@ footer{padding:60px 0 80px;border-top:1px solid var(--line);text-align:center}
 
   <!-- ===== SEMANA 2 ===== -->
   <div class="wrap">
-    <div class="week-break">
+    <div class="week-break"><img src="cpp-logo.png" alt="" class="ornament">
       <div class="num">II</div>
       <div class="label">Semana 2 · Entrega</div>
       <div class="title">Encantamento do Produto · Estrutura</div>
@@ -823,7 +853,7 @@ footer{padding:60px 0 80px;border-top:1px solid var(--line);text-align:center}
 
   <!-- ===== SEMANA 3 ===== -->
   <div class="wrap">
-    <div class="week-break">
+    <div class="week-break"><img src="cpp-logo.png" alt="" class="ornament">
       <div class="num">III</div>
       <div class="label">Semana 3 · Atração</div>
       <div class="title">Marketing de Atração</div>
@@ -1099,7 +1129,7 @@ footer{padding:60px 0 80px;border-top:1px solid var(--line);text-align:center}
 
   <!-- ===== SEMANA 4 ===== -->
   <div class="wrap">
-    <div class="week-break">
+    <div class="week-break"><img src="cpp-logo.png" alt="" class="ornament">
       <div class="num">IV</div>
       <div class="label">Semana 4 · Operação</div>
       <div class="title">Inteligência Comercial · Unidade · Multiplicação</div>
@@ -1553,16 +1583,23 @@ footer{padding:60px 0 80px;border-top:1px solid var(--line);text-align:center}
 <!-- CTA -->
 <section class="cta" id="cta">
   <div class="wrap cta-in">
+    <img src="cpp-logo.png" alt="CPP" class="cta-logo">
     <span class="eyebrow">Próximo nível</span>
     <h2>Os 30 dias te <em>tiram do convênio</em>.<br>A Mentoria CPP te leva pra <em>R$ 100k+ por mês</em> particular.</h2>
     <p>Esse plano é a base. A Mentoria Cirurgião Particular Premium é o caminho de 6 meses ao lado de Patrick + Dr. Mateus, com 3 encontros individuais, 12 coletivos e a comunidade dos cirurgiões que estão fazendo essa transição agora.</p>
     <a href="https://wa.me/5583993527775?text=Quero%20saber%20mais%20sobre%20a%20Mentoria%20CPP" class="btn">Conversar sobre a Mentoria</a>
+    <div class="cta-signature">
+      <span class="name">Patrick Suyti</span>
+      <span style="color:var(--gold-soft)">×</span>
+      <span class="name">Dr. Mateus Jerônimo</span>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
+    <img src="cpp-logo.png" alt="CPP" class="foot-logo">
     <div class="foot-brand">Cirurgião Particular Premium</div>
     <div class="foot-meta">Patrick Suyti · Dr. Mateus Jerônimo · Maio 2026</div>
     <div class="foot-note">"Você não cobra caro porque não merece. Você cobra barato porque tem medo de ser o cirurgião que sabe que é."</div>
